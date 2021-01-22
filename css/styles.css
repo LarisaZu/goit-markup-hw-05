@@ -603,10 +603,16 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+
+  display: flex;
+  align-items: center;
+
   width: 100%;
   height: 100%;
+
   background-color: var(--overlay-bgc);
 
+  opacity: 0;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -614,11 +620,12 @@ button {
 .portfolio-list .link:hover .overlay,
 .portfolio-list .link:focus .overlay {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .overlay p {
   position: absolute;
-  padding: 63px 24px;
+  padding: 0 24px;
 
   margin: 0;
   color: var(--primary-white-color);
